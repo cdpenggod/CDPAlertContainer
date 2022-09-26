@@ -3,6 +3,8 @@
 ## Alert弹层容器，可使你的 自定义view 自动拥有 以任意效果 从屏幕弹出的 弹层能力，且支持各种自定义设置，如 弹入/弹出效果自定义，背景蒙层自定义，弹层圆角，弹层阴影 等等。
 ## 详情看 demo 演示。
 
+## other see: https://github.com/cdpenggod/CDPPopupContainer
+
 ```swift
 //吊起弹层 (其中一种appear类方法，根据自己需求选择对应的appear方法)
 CDPAlertContainer.appear(contentView: customView, fromVC: self) { container in
