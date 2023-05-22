@@ -57,6 +57,8 @@ class CDPAlertPresentationController: UIPresentationController {
     public var duration: TimeInterval = 0.3
     /// 弹层圆角
     public var cornerRadius: CGFloat = 8
+    /// 弹层masksToBounds
+    public var masksToBounds: Bool = true
     /// 最外层是否拥有阴影
     public var haveShadow: Bool = false
     /// 阴影Opacity
@@ -124,7 +126,7 @@ class CDPAlertPresentationController: UIPresentationController {
         //更新过渡后的view
         presentedViewControllerView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         //圆角
-        presentedViewControllerView.layer.masksToBounds = true
+        presentedViewControllerView.layer.masksToBounds = masksToBounds
         presentedViewControllerView.layer.cornerRadius = max(0, cornerRadius)
         presentedViewControllerView.frame = shadowView?.bounds ?? .zero
         shadowView?.addSubview(presentedViewControllerView)
