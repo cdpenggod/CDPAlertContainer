@@ -90,6 +90,13 @@ class CDPAlertContainer: UIViewController {
             delegate.cornerRadius = cornerRadius
         }
     }
+    /// 弹层masksToBounds
+    public var masksToBounds: Bool = true {
+        didSet {
+            guard let delegate = transitioningDelegate as? CDPAlertPresentationController else { return }
+            delegate.masksToBounds = masksToBounds
+        }
+    }
     /// 最外层是否拥有阴影 (默认 NO)
     public var haveShadow: Bool = false {
         didSet {
